@@ -3,18 +3,18 @@ import signal
 import logging
 import random
 
-# Configure logging
+
 logging.basicConfig(filename='log_monitor.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Define log message formats
+
 formats = {
     logging.INFO: "INFO message",
     logging.DEBUG: "DEBUG message",
     logging.ERROR: "ERROR message"
 }
 
-# Define log levels to cycle through
+
 log_levels = [logging.INFO, logging.DEBUG, logging.ERROR]
 
 def signal_handler(sig, frame):
@@ -26,7 +26,7 @@ signal.signal(signal.SIGINT, signal_handler)
 def monitor_log(log_file):
     try:
         with open(log_file, 'r') as file:
-            file.seek(0, 2)  # Move the cursor to the end of the file
+            file.seek(0, 2)  
             while True:
                 line = file.readline()
                 if line:
@@ -54,17 +54,17 @@ def analyze_log(log_file):
         exit(1)
 
 def main():
-    log_file = 'example.log'  # Change this to your log file path
+    log_file = 'https://github.com/SnehRex1/Log-Analysis-and-Monitoring-Script'  
 
-    # Monitor log file
+
     logger.info("Starting log monitoring...")
     monitor_log(log_file)
 
-    # Analyze log file
+
     logger.info("Starting log analysis...")
     analyze_log(log_file)
 
-    # Continuously log messages at different levels
+   
     logger.info("Starting continuous logging...")
     while True:
         try:
