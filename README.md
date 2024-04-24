@@ -27,12 +27,7 @@ You can test the script by creating a sample log file and adding entries to it w
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-MIT
-
-CODE EXPLANATION:-
-explain the code:
+## Code Explanation 
 
 The script starts by setting up a logging configuration using logging.basicConfig. This specifies the filename, log level, and format of the log messages.
 
