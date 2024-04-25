@@ -40,7 +40,7 @@ def analyze_log(log_file):
     try:
         with open(log_file, 'r') as file:
             log_data = file.readlines()
-            keywords = ['ERROR', 'HTTP']  # Add more keywords as needed
+            keywords = ['ERROR', 'HTTP']  
             keyword_counts = {keyword: 0 for keyword in keywords}
             for line in log_data:
                 for keyword in keywords:
